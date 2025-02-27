@@ -43,3 +43,12 @@ Here is how you'd do it by using this proxy server:
 ```bash
 curl https://ip.oxylabs.io/location -x http://localhost:4128/ --cacert ./cert/CA.pem
 ```
+
+### Configure All Outbound Traffic to use Proxy Server
+
+```bash
+iptables -t nat -A OUTPUT -p tcp --dport 80 -j DNAT --to-destination localhost:4128
+iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination localhost:4128
+```
+
+
