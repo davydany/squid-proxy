@@ -41,5 +41,5 @@ curl https://ip.oxylabs.io/location
 Here is how you'd do it by using this proxy server:
 
 ```bash
-curl https://ip.oxylabs.io/location -x http://localhost:3128/ --cacert ./cert/CA.pem
+curl https://ip.oxylabs.io/location -x http://localhost:4128/ --cacert ./cert/CA.pem
 ```
